@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+
+<h2>Users</h2>
+<br>
+<div class="container-fluid">
+    <div class="card shadow">
+
+        <div class="card-body">
+            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                <table class="table dataTable my-0" id="dataTable">
+                    <thead>
+                    <tr align="center">
+                        <th th:text="id"></th>
+                        <th th:text="username"></th>
+                        <th th:text="password"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="u : ${users}">
+                        <td align="center" th:text="${u.id}"></td>
+                        <td align="center" th:text="${u.userName}"></td>
+                        <td align="center" th:text="${u.password}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
